@@ -14,15 +14,17 @@ export const bannerStyle: SxProps<Theme> = {
   height: "100vh",
   textAlign: "center",
   overflow: "hidden",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
   position: "relative",
 };
 
 export const sliderStyle: SxProps<Theme> = {
-  position: "absolute",
-  width: "200px",
-  height: "250px",
-  top: "10%",
-  left: "calc(50% - 100px)",
+  position: "relative",
+  width: `max(calc(100% / ${NUM_PROJECTS} + 50px), 100px)`,
+  height: "200px",
+  top: "-30%",
   transformStyle: "preserve-3d",
   transform: "perspective(1000px)",
   animation: `${spin} 20s linear infinite`,
@@ -32,7 +34,7 @@ export const itemStyle = (position: number): SxProps<Theme> => {
   return {
     position: "absolute",
     inset: "0 0 0 0",
-    transform: `rotateY(calc( ${position} * (360deg / ${NUM_PROJECTS}))) translateZ(550px)`,
+    transform: `rotateY(calc( ${position} * (360deg / ${NUM_PROJECTS}))) translateZ(clamp(100px, 35vw, 550px))`,
   };
 };
 
@@ -40,4 +42,15 @@ export const itemImageStyle: SxProps<Theme> = {
   width: "100%",
   height: "100%",
   objectFit: "cover",
+  borderRadius: "10px",
+};
+
+export const defaultitemImageSytle: SxProps<Theme> = {
+  width: "100%",
+  height: "100%",
+  bgcolor: "primary.main",
+  display: "flex",
+  alignItems: "center",
+  justifyContent: "center",
+  borderRadius: "10px",
 };
