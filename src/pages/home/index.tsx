@@ -1,9 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
+import ProjectsWheel from "../projects/projects-wheel";
 
 const Home: React.FC = () => {
   return (
-    <Box height="200vh">
-      <Typography>aaaaaaaaaaaa</Typography>
+    <Box maxHeight="100vh">
+      <ProjectsWheel />
     </Box>
   );
 };
