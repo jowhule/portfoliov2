@@ -22,8 +22,8 @@ export const bannerStyle: SxProps<Theme> = {
 
 export const sliderStyle: SxProps<Theme> = {
   position: "relative",
-  width: `max(calc(100% / ${NUM_PROJECTS} + 50px), 100px)`,
-  height: "200px",
+  width: `min(calc(100% / ${NUM_PROJECTS} + 50px), 400px)`,
+  height: "min(calc(100vw / 3), 220px)",
   top: "-30%",
   transformStyle: "preserve-3d",
   transform: "perspective(1000px)",

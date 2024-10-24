@@ -28,7 +28,9 @@ const ProjectsWheel: React.FC<ProjectsWheelProps> = ({ children }) => {
                 />
               ) : (
                 <Box sx={defaultitemImageSytle}>
-                  <Typography variant="h3">TBA</Typography>
+                  <Typography sx={{ typography: { md: "h3", sm: "p" } }}>
+                    TBA
+                  </Typography>
                 </Box>
               )}
             </Box>
