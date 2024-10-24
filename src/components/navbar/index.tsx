@@ -4,7 +4,7 @@ interface NavbarProps {
   children?: React.ReactElement<unknown>;
 }
 
-const pages = ["Products", "Pricing", "Blog"];
+// const pages = ["Products", "Pricing", "Blog"];
 
 function HideOnScroll(props: NavbarProps) {
   const { children } = props;
@@ -15,7 +15,8 @@ function HideOnScroll(props: NavbarProps) {
     </Slide>
   );
 }
-
+// https://mui.com/material-ui/react-app-bar/#app-bar-with-responsive-menu
+// https://medium.com/@galohernandez/vite-react-react-router-dom-the-latest-way-312ee887197e
 const Navbar: React.FC = (props: NavbarProps) => {
   return (
     <HideOnScroll {...props}>
