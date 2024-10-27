@@ -36,7 +36,7 @@ const router = createBrowserRouter([
 function App() {
   return (
     <>
-      <ThemeProvider theme={theme} defaultMode="dark">
+      <ThemeProvider theme={theme}>
         <CssBaseline />
         <RouterProvider router={router} />
       </ThemeProvider>
